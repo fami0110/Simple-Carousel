@@ -32,7 +32,7 @@ Download the [css]() and [js]() file to install Simple Carousel.
 </div>
 ```
 
-3. Intance the Simple Carousel class to init the carousel
+3. Initialize the carousel
 ```html
 <!-- Make sure to place this script bellow the simple-carousel.js script -->
 <script>
