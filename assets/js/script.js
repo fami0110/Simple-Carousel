@@ -1,0 +1,1 @@
+let example_1 = new Carousel('example-1')
