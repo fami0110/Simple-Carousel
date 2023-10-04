@@ -1,22 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/simple-carousel.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/simple-carousel.css">
   <title>Simple Carousel</title>
 </head>
+
 <body>
-  <div id="example-1">
-    <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" alt="image1">
-    <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" alt="image2">
-    <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" alt="image3">
-    <img src="assets/img/pine-watt-2Hzmz15wGik-unsplash.jpg" alt="image4">
-    <img src="assets/img/ryan-schroeder-Gg7uKdHFb_c-unsplash.jpg" alt="image5">
-  </div>
+  <header>
+    <div id="myCarousel">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+      <img src="assets/img/pine-watt-2Hzmz15wGik-unsplash.jpg" loading="lazy" alt="image4">
+      <img src="assets/img/ryan-schroeder-Gg7uKdHFb_c-unsplash.jpg" loading="lazy" alt="image5">
+    </div>
+    <div class="title">
+      <h1>Simple Carousel</h1>
+      <p>A simple image carousel for your jumbotron section</p>
+    </div>
+  </header>
+  <main>
+    <h2>About</h2>
+    <hr>
+    <p>Simple Carousel is a library that can generate a simple carousel for you. This carousel will fit to your
+      jumbotron section. Because the width and height is relative to your viewport, which mean the carousel size will
+      fill to your entire screen. Although you can custom the carousel the width and height.</p>
+    <br>
+    <ol>
+      Available Features:
+      <li>Slider - Arrow button to navigate the carousel items.</li>
+      <li>Dots - An indicator for active carousel item, and also can be used as navigator.</li>
+      <li>Autoplay - This carousel can automaticly slide itself. <b>(can be disabled)</b></li>
+      <li>Backdrop - Adjust the backdrop opacity of your carousel.</li>
+    </ol>
+    <br><br>
+
+    <h2>Installation</h2>
+    <hr>
+    <ol>
+      Download the css and js file to install Simple Carousel here:
+      <li>CSS</li>
+      <ul>
+        <li><a href="assets/css/simple-carousel.css" download>simple-carousel.css</a></li>
+        <li><a href="assets/css/simple-carousel-min.css" download>simple-carousel-min.css</a></li>
+      </ul>
+      <li>Javascript</li>
+      <ul>
+        <li><a href="assets/js/simple-carousel.js" download>simple-carousel.js</a></li>
+        <li><a href="assets/js/simple-carousel-min.js" download>simple-carousel-min.js</a></li>
+      </ul>
+    </ol>
+    <br><br>
+
+    <h2>Usage</h2>
+    <hr>
+    <p>1. Attach the css and js file on your html file.</p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #008000">&lt;!-- Place this &lt;link&gt; tag inside the &lt;head&gt; tag --&gt;</span>
+&lt;link rel=<span style="color: #a31515">&quot;stylesheet&quot;</span> href=<span style="color: #a31515">&quot;path_to/simple-carousel.css&quot;</span>&gt;
+
+<span style="color: #008000">&lt;!-- Place this &lt;script&gt; tag at the end of your &lt;body&gt; tag --&gt;</span>
+&lt;script src=<span style="color: #a31515">&quot;path_to/simple-carousel.js&quot;</span>&gt;&lt;/script&gt;</pre>
+    <br>
+    <p>2. Make a carousel container with an id that contains the  as the carousel items.</p>
+    <pre style="margin: 0; line-height: 125%">&lt;div id=<span style="color: #a31515">&quot;myCarousel&quot;</span>&gt;
+  &lt;img src=<span style="color: #a31515">&quot;path_to/your_image_1.jpg&quot;</span>&gt;
+  &lt;img src=<span style="color: #a31515">&quot;path_to/your_image_2.jpg&quot;</span>&gt;
+  &lt;img src=<span style="color: #a31515">&quot;path_to/your_image_3.jpg&quot;</span>&gt;
+  &lt;img src=<span style="color: #a31515">&quot;path_to/your_image_4.jpg&quot;</span>&gt;
+
+  <span style="color: #008000">&lt;!-- Add more image if you want --&gt;</span>
+&lt;/div&gt;</pre>
+    <br>
+    <p>3. Initialize the carousel</p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #008000">&lt;!-- Make sure to place this script under the simple-carousel.js script --&gt;</span>
+&lt;script&gt;
+  <span style="color: #0000ff">let</span> myCarousel = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;myCarousel&#39;</span>);
+&lt;/script&gt;</pre>
+    <br><br>
+
+    <h2>Configuration</h2>
+    <hr>
+    <p>Simple Carousel provide some features that you can configure as you want. The default configuration is like the
+       previous demo. Here is the list of the configuration that you can modify:</p>
+    <br>
+    <ul>
+      <li><code>width</code> - Set the width of the carousel. (Default: <span>100%</span>)</li>
+      <li><code>height</code> - Set the height of the carousel. (Default: <span>100vh</span>)</li>
+      <li><code>navigation_mode</code> - The layout of carousel navigation UI. You can set it with intenger value (<span>0-5</span>).</li>
+      <li><code>backdrop_opacity</code> - Adjust the backdrop opacity of your carousel. You can set it with float value (<span>0-1</span>).</li>
+      <li><code>autoplay</code> - Autoplay the carousel presentations. (Default: <span>true</span>)</li>
+      <li><code>autoplay_delay</code> - Set the delay every times presentation changing in miliseconds. (default: <span>4000</span>)</li>
+      <li><code>press_cooldown</code> - Prevent user from pressing navigation button rapidly. (default: <span>true</span>)</li>
+    </ul>
+    <br>
+    <p class="no-indent">Take a look at some demo bellow :</p>
+    <br>
+    <h3>1. Default Configuration</h3>
+    <br>
+    <p>By default, Simple Carousel has <span>100%</span> width and <span>100vh</span> height.</p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">let</span> example_1 = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;example_1&#39;</span>);</pre>
+    <div id="example_1" style="position: absolute; left: 0;">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+    </div>
+    <div style="height: 100vh;"></div>
+    <br><br>
+    <h3>2. Custom Width and Height</h3>
+    <br>
+    <p>To set your own configuration, add the second argument with object. In this case, you can use properties <code>width</code> and <code>height</code> to modify the size of the carousel.</p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">let</span> example_2 = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;example_2&#39;</span>, {
+  width: <span style="color: #a31515">&#39;340px&#39;</span>,
+  height: <span style="color: #a31515">&#39;170px&#39;</span>
+});</pre>
+    <br>
+    <div id="example_2" style="margin: 0 auto;">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+    </div>
+    <br><br>
+    <h3>3. Navigation Layouts</h3>
+    <br>
+    <p>Simple Carousel has build-in UI layouts that you can change as you want. Look at the example bellow.</p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">let</span> example_3 = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;example_3&#39;</span>, {
+  height: <span style="color: #a31515">&#39;400px&#39;</span>,
+  navigation_mode: <span style="color: #0000ff">3</span>
+});</pre>
+    <br>
+    <div id="example_3">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+    </div>
+    <p>You can set <code>navigation_mode</code> property with integer value within range <span>0-5</span>.
+       Here is the descriptions of <code>navigation_mode</code> value :</p>
+    <br>
+    <ul>
+      <li><code>0</code> or except <code>1-5</code> - Default layout (slider & dots).</li>
+      <li><code>1</code> - Slider only.</li>
+      <li><code>2</code> - Dots only.</li>
+      <li><code>3</code> - Bottom center layouts.</li>
+      <li><code>4</code> - Bottom right slider buttons.</li>
+      <li><code>5</code> - Hidden navigation (automaticaly set the <code>autoplay</code> to <span>true</span>)</li>
+    </ul>
+    <br><br>
+    <h3>4. Autoplay</h3>
+    <br>
+    <p>Autoplay can be enabled or disabled, by setting the <code>autoplay</code> property to <span>true</span> or <span>false</span>. 
+      You can also set the <code>autoplay_delay</code> value with milliseconds.</p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">let</span> example_4 = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;example_4&#39;</span>, {
+  height: <span style="color: #a31515">&#39;400px&#39;</span>,
+  navigation_mode: <span style="color: #0000ff">1</span>,
+  autoplay: <span style="color: #119a1e">false</span>
+});</pre>
+    <br>
+    <div id="example_4">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+    </div>
+    <br>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">let</span> example_5 = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;example_5&#39;</span>, {
+  height: <span style="color: #a31515">&#39;400px&#39;</span>,
+  navigation_mode: <span style="color: #0000ff">2</span>,
+  autoplay_delay: <span style="color: #0000ff">8000</span>
+});</pre>
+    <br>
+    <div id="example_5">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+    </div>
+    <br><br>
+    <h3>5. Backdrop Opacity</h3>
+    <br>
+    <p>Adjust the backdrop opacity of your carousel, by setting the <code>backdrop_opacity</code> with value between <span>0-1</span>. 
+      The greater the value, the backdrop will get more darker. </p>
+    <pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">let</span> example_6 = <span style="color: #0000ff">new</span> Carousel(<span style="color: #a31515">&#39;example_6&#39;</span>, {
+  height: <span style="color: #a31515">&#39;400px&#39;</span>,
+  navigation_mode: <span style="color: #0000ff">4</span>,
+  backdrop_opacity: <span style="color: #0000ff">0.5</span>
+});</pre>
+    <br>
+    <div id="example_6">
+      <img src="assets/img/ales-krivec-4miBe6zg5r0-unsplash.jpg" loading="lazy" alt="image1">
+      <img src="assets/img/bailey-zindel-NRQV-hBF10M-unsplash.jpg" loading="lazy" alt="image2">
+      <img src="assets/img/mark-harpur-K2s_YE031CA-unsplash.jpg" loading="lazy" alt="image3">
+    </div>
+    <br><br>
+    <h2>Contributing</h2>
+    <hr>
+    <p>Pull requests are welcome. For major changes, please open an issue first
+      to discuss what you would like to change. Please make sure to update tests as appropriate.</p>
+  </main>
+  <footer>
+    <p>Made with</p>
+    <img width="16" height="16" src="https://img.icons8.com/color/24/filled-like.png" alt="filled-like"/>
+    <p>by <a href="https://github.com/fami0110">fami0110</a></p>
+  </footer>
   <script src="assets/js/simple-carousel.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>

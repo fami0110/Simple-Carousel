@@ -7,19 +7,19 @@
 }
 
 .carousel {
-  height: calc(100vh + 18px);
   width: 100%;
+  height: calc(100vh + 18px);
   box-sizing: content-box;
-  margin-bottom: 18px;
   position: relative;
+  scrollbar-gutter: stable;
 }
 
 .carousel::after {
   content: '';
   position: absolute;
   width: 100%;
-  height: 18px;
-  bottom: 0;
+  height: 20px;
+  bottom: -2px;
   background-color: white;
   pointer-events: none;
 }
@@ -30,39 +30,95 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 1rem;
+}
+
+.carousel-ui .navigation {
+  width: inherit;
+  height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
   pointer-events: none;
+  padding: 1rem;
+}
+
+.carousel-ui.mode-3 .navigation {
+  height: fit-content;
+  position: absolute;
+  bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel-ui.mode-4 .navigation {
+  height: fit-content;
+  position: absolute;
+  bottom: 1rem;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
 }
 
 .carousel-ui .slider {
-  padding: 1.2rem 4px;
   color: white;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
   cursor: default;
   pointer-events: fill;
+}
+
+.carousel-ui:not(.mode-3) .slider {
+  padding: 1.2rem 4px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
   transition: background 0.3s ease;
+}
+
+.carousel-ui.mode-4 .slider {
+  padding: 8px 4px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-ui.mode-3 .slider {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.carousel-ui.mode-3 .slider:hover {
+  color: white;
+}
+
+.carousel-ui:not(.mode-3) .slider:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-ui.mode-4 .slider:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-ui.mode-2 .slider,
+.carousel-ui.mode-5 .slider {
+  display: none;
 }
 
 .carousel-ui .slider::selection {
   background-color: transparent;
 }
 
-.carousel-ui .slider:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
 .carousel-ui .dots {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   gap: 8px;
+}
+
+.carousel-ui:not(.mode-3) .dots {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .carousel-ui .dots span {
@@ -77,6 +133,12 @@
 
 .carousel .dots span.active {
   background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-ui.mode-1 .dots,
+.carousel-ui.mode-4 .dots,
+.carousel-ui.mode-5 .dots {
+  display: none;
 }
 
 .carousel-content {
@@ -103,12 +165,17 @@
 }
 
 .carousel-item img {
+  width: inherit;
+  height: unset;
+}
+
+.carousel.responsive .carousel-item img {
   height: inherit;
   width: unset;
 }
 
 @media only screen and (min-width: 1100px) {
-  .carousel-item img {
+  .carousel.responsive .carousel-item img {
     width: inherit;
     height: unset;
   }

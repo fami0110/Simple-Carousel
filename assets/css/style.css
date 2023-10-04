@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  /* outline: 1px solid red; */
+}
+
+body {
+  min-height: 1000px;
+}
+
+header {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  gap: 1rem;
+}
+
+.title h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Norican', cursive;
+  font-weight: 400;
+  line-height: 5rem;
+}
+
+.title p {
+  padding: 0 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+main {
+  max-width: 800px;
+  padding: 1rem 1.5rem 2rem;
+  margin: auto;
+}
+
+main h2 {
+  font-size: 2rem;
+}
+
+main h3 {
+  font-size: 1.2rem;
+}
+
+main hr {
+  margin: 8px 0 1.5rem;
+}
+
+main p {
+  text-indent: 1rem;
+  line-height: 1.4rem;
+  text-align: justify;
+}
+
+main p.no-indent {
+  text-indent: 0;
+}
+
+main ol:is(ol, ul) {
+  list-style-position: inside;
+}
+
+main li {
+  margin-top: 6px;
+}
+
+main pre {
+  padding: 1rem;
+  margin: 1rem !important;
+  font-family: monospace;
+  background-color: rgb(245, 245, 245);
+  overflow-x: auto;
+}
+
+main pre span {
+  font-family: monospace;
+}
+
+main a {
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+main code {
+  padding: 3px 6px;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: rgb(50, 50, 50);
+  border-radius: 6px;
+}
+
+main > ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  line-height: 1.5rem;
+}
+
+main ol ul {
+  list-style: none;
+  margin-left: 22px;
+}
+
+main ol ul li::before {
+  content: '• ';
+  position: relative;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+main > ul span,
+main p span {
+  font-family: monospace;
+  font-size: 1rem;
+  background-color: rgb(245, 245, 245);
+  color: rgb(219, 76, 76);
+}
+
+footer {
+  padding: 1.2rem;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+footer * {
+  font-family: monospace;
+  color: white;
+  font-size: 1rem;
+}
+
+footer img {
+  position: relative;
+  margin-top: 2px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

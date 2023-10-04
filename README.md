@@ -4,7 +4,8 @@ Simple Carousel is a library that can generate a simple carousel for your page. 
 **Available Features :**
 1. Slider - Arrow button to navigate the carousel items.
 2. Dots - An indicator for active carousel item, and also can be used as navigator.
-3. Auto Slide - This carousel can automaticly slide itself.
+3. Auto Slide - This carousel can automaticly slide itself. **(can be disabled)**
+4. Backdrop - Adjust the backdrop opacity of your carousel.
 
 ## Installation
 Download the [css]() and [js]() file to install Simple Carousel.
@@ -22,7 +23,7 @@ Download the [css]() and [js]() file to install Simple Carousel.
 
 2. Make a carousel container with an id that contains the <img> as the carousel items.
 ```html
-<div id="example">
+<div id="myCarousel">
   <img src="path_to/your_image_1.jpg">
   <img src="path_to/your_image_2.jpg">
   <img src="path_to/your_image_3.jpg">
@@ -34,7 +35,7 @@ Download the [css]() and [js]() file to install Simple Carousel.
 
 3. Initialize the carousel
 ```html
-<!-- Make sure to place this script bellow the simple-carousel.js script -->
+<!-- Make sure to place this script under the simple-carousel.js script -->
 <script>
   let myCarousel = new Carousel('myCarousel');
 </script>
