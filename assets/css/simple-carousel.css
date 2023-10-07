@@ -1,182 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 .carousel > * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .carousel {
-  width: 100%;
-  height: calc(100vh + 18px);
-  box-sizing: content-box;
-  position: relative;
-  scrollbar-gutter: stable;
+  width: 100% !important;
+  height: calc(100vh + 18px) !important;
+  box-sizing: content-box !important;
+  position: relative !important;
+  scrollbar-gutter: stable !important;
 }
 
 .carousel::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  bottom: -2px;
-  background-color: white;
-  pointer-events: none;
+  content: '' !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 20px !important;
+  bottom: -2px !important;
+  background-color: white !important;
+  pointer-events: none !important;
 }
 
 .carousel-ui {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .carousel-ui .navigation {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-  padding: 1rem;
+  width: inherit !important;
+  height: inherit !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  pointer-events: none !important;
+  padding: 1rem !important;
 }
 
 .carousel-ui.mode-3 .navigation {
-  height: fit-content;
-  position: absolute;
-  bottom: 1rem;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  height: fit-content !important;
+  position: absolute !important;
+  bottom: 1rem !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
 }
 
 .carousel-ui.mode-4 .navigation {
-  height: fit-content;
-  position: absolute;
-  bottom: 1rem;
-  justify-content: end;
-  align-items: center;
-  gap: 8px;
+  height: fit-content !important;
+  position: absolute !important;
+  bottom: 1rem !important;
+  justify-content: end !important;
+  align-items: center !important;
+  gap: 8px !important;
 }
 
 .carousel-ui .slider {
-  color: white;
-  cursor: default;
-  pointer-events: fill;
+  color: white !important;
+  cursor: default !important;
+  pointer-events: fill !important;
 }
 
 .carousel-ui:not(.mode-3) .slider {
-  padding: 1.2rem 4px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  transition: background 0.3s ease;
+  padding: 1.2rem 4px !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  border-radius: 8px !important;
+  transition: background 0.3s ease !important;
 }
 
 .carousel-ui.mode-4 .slider {
-  padding: 8px 4px;
-  font-size: 1.2rem;
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 4px !important;
+  font-size: 1.2rem !important;
+  border-radius: 6px !important;
+  background: rgba(0, 0, 0, 0.6) !important;
 }
 
 .carousel-ui.mode-3 .slider {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+  transition: color 0.3s ease !important;
 }
 
 .carousel-ui.mode-3 .slider:hover {
-  color: white;
+  color: white !important;
 }
 
 .carousel-ui:not(.mode-3) .slider:hover {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6) !important;
 }
 
 .carousel-ui.mode-4 .slider:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8) !important;
 }
 
 .carousel-ui.mode-2 .slider,
 .carousel-ui.mode-5 .slider {
-  display: none;
+  display: none !important;
 }
 
 .carousel-ui .slider::selection {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .carousel-ui .dots {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
 }
 
 .carousel-ui:not(.mode-3) .dots {
-  position: absolute;
-  bottom: 2.2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute !important;
+  bottom: 2.2rem !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
 .carousel-ui .dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-  pointer-events: fill;
+  display: inline-block !important;
+  width: 12px !important;
+  height: 12px !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border-radius: 50% !important;
+  transition: background-color 0.3s ease !important;
+  pointer-events: fill !important;
 }
 
 .carousel .dots span.active {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1) !important;
 }
 
 .carousel-ui.mode-1 .dots,
 .carousel-ui.mode-4 .dots,
 .carousel-ui.mode-5 .dots {
-  display: none;
+  display: none !important;
 }
 
 .carousel-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: inline mandatory;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: inline mandatory !important;
 }
 
 .carousel-item {
-  flex: 0 0 auto;
-  width: inherit;
-  height: inherit;
-  background-color: black;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
+  flex: 0 0 auto !important;
+  width: inherit !important;
+  height: inherit !important;
+  background-color: black !important;
+  overflow: hidden !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  scroll-snap-align: start !important;
 }
 
 .carousel-item img {
-  width: inherit;
-  height: unset;
-}
-
-.carousel.responsive .carousel-item img {
-  height: inherit;
-  width: unset;
-}
-
-@media only screen and (min-width: 1100px) {
-  .carousel.responsive .carousel-item img {
-    width: inherit;
-    height: unset;
-  }
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }

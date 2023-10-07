@@ -123,9 +123,6 @@ class Carousel {
     // Set the width and height carousel
     this.carousel.style.width = this.config.width;
     this.carousel.style.height = `calc(${this.config.height} + 18px)`;
-    if (this.config.width == '100%') {
-      this.carousel.classList.add('responsive');
-    }
 
     // Set backdrop opacity
     this.ui.style.backgroundColor = `rgba(0, 0, 0, ${this.config.backdrop_opacity})`
