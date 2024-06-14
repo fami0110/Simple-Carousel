@@ -36,9 +36,13 @@ class Carousel {
       let builder = `
         <div class="carousel-ui">
           <div class="navigation">
-            <span class="material-symbols-rounded slider slide-backward">arrow_back_ios_new</span>
+            <span class="slider slide-backward">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+            </span>
             <div class="dots"></div>
-            <span class="material-symbols-rounded slider slide-forward">arrow_forward_ios</span>
+            <span class="slider slide-forward">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+            </span>
           </div>
         </div>
         <div class="carousel-content">
